@@ -1,13 +1,20 @@
-﻿using System.Web;
+﻿using IntroMvcDemo.Common;
 using System.Web.Optimization;
 
 namespace IntroMvcDemo
 {
-    public class BundleConfig
+    public sealed class BundleConfig
     {
+        private BundleConfig()
+        {
+
+        }
+
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            Arg.IsNotNull(() => bundles);
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 

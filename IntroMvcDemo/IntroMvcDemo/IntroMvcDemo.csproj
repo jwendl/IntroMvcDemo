@@ -180,8 +180,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WindsorActivator.cs" />
+    <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\ArtistController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SongController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -249,10 +251,17 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Views\Artist\Index.cshtml" />
+    <Content Include="Views\Artist\_Artist.cshtml" />
+    <Content Include="Views\Album\Item.cshtml" />
+    <Content Include="Views\Artist\Item.cshtml" />
+    <Content Include="Views\Song\Item.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Song.cshtml" />
+    <Content Include="Views\Song\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

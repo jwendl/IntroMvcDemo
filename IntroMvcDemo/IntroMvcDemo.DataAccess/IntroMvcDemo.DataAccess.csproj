@@ -59,6 +59,11 @@
     <Compile Include="DataRepository.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Interfaces\IDataRepository.cs" />
+    <Compile Include="Migrations\201606030150131_InitialDatabase.cs" />
+    <Compile Include="Migrations\201606030150131_InitialDatabase.Designer.cs">
+      <DependentUpon>201606030150131_InitialDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="Models\Album.cs" />
@@ -81,6 +86,11 @@
     <CodeAnalysisDictionary Include="..\Solution Items\CodeDictionary.xml">
       <Link>CodeDictionary.xml</Link>
     </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201606030150131_InitialDatabase.resx">
+      <DependentUpon>201606030150131_InitialDatabase.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

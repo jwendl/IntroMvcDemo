@@ -1,17 +1,15 @@
-﻿using System.Resources;
-using System;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("IntroMvcDemo.DataAccess")]
+[assembly: AssemblyTitle("IntroMvcDemo.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("IntroMvcDemo.DataAccess")]
+[assembly: AssemblyProduct("IntroMvcDemo.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -22,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e8d0a569-a5d5-496f-941e-95582377c277")]
+[assembly: Guid("ccc218d3-0811-4e93-8ce8-6bc42a53a88b")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -36,6 +34,3 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: CLSCompliant(true)]
-[assembly: NeutralResourcesLanguage("en-US")]
-

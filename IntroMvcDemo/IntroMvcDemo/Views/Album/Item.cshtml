@@ -1,0 +1,12 @@
+﻿@using IntroMvcDemo.DataAccess.Models
+
+@model Album
+
+<h2>Album Display</h2>
+
+<ol>
+    @foreach (var song in Model.Songs)
+    {
+        <li>@Html.ActionLink(song.Title, "Item", "Song", new { id = song.Id }, null) - @song.Duration</li>
+    }
+</ol>

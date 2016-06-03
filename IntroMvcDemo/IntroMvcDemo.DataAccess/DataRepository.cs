@@ -25,6 +25,13 @@ namespace IntroMvcDemo.DataAccess
             return await DataContext.Set<T>().ToListAsync();
         }
 
+        public async Task<IEnumerable<T>> FetchAllAsync(params Expression<Func<T, object>>[] includes)
+        {
+            var query = DataContext.Set<T>().AsQueryable();
+            query = includes.Aggregate(query, (current, include) => current.Include(include));
+            return await query.ToListAsync();
+        }
+
         public async Task<T> FetchAsync(int id)
         {
             return await DataContext.Set<T>().FindAsync(id);
@@ -33,6 +40,13 @@ namespace IntroMvcDemo.DataAccess
         public async Task<T> FindOneAsync(Expression<Func<T, bool>> expression)
         {
             return await DataContext.Set<T>().SingleOrDefaultAsync(expression);
+        }
+
+        public async Task<T> FindOneAsync(Expression<Func<T, bool>> expression, params Expression<Func<T, object>>[] includes)
+        {
+            var query = DataContext.Set<T>().AsQueryable();
+            query = includes.Aggregate(query, (current, include) => current.Include(include));
+            return await query.SingleOrDefaultAsync(expression);
         }
 
         public async Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> expression)

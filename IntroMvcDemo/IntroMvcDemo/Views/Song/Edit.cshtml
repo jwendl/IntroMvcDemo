@@ -1,0 +1,15 @@
+﻿@using IntroMvcDemo.DataAccess.Models
+@model Song
+
+@{
+    ViewBag.Title = "Edit " + Model.Title;
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorFor(m => m)
+    
+    <input type="submit" value="Submit"/> <input type="reset" value="Clear" />
+}

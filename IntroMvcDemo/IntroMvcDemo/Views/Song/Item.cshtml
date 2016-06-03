@@ -1,0 +1,12 @@
+﻿@using IntroMvcDemo.DataAccess.Models
+@model Song
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h2>Song Display</h2>
+
+@Html.DisplayFor(m => m)
+
+@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) @Html.ActionLink("Delete", "Delete", new { id = Model.Id })

@@ -9,9 +9,13 @@ namespace IntroMvcDemo.DataAccess.Interfaces
     {
         Task<IEnumerable<T>> FetchAllAsync();
 
+        Task<IEnumerable<T>> FetchAllAsync(params Expression<Func<T, object>>[] includes);
+
         Task<T> FetchAsync(int id);
 
         Task<T> FindOneAsync(Expression<Func<T, bool>> expression);
+
+        Task<T> FindOneAsync(Expression<Func<T, bool>> expression, params Expression<Func<T, object>>[] includes);
 
         Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> expression);
 

@@ -1,0 +1,7 @@
+﻿@using IntroMvcDemo.DataAccess.Models
+
+@model Artist
+
+<li>
+    @Html.ActionLink(Model.Name, "Item", new { id = Model.Id }) - @Model.Albums.Count
+</li>

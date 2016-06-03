@@ -1,10 +1,15 @@
 ﻿@using IntroMvcDemo.DataAccess.Models
-@model Artist
+@model IEnumerable<Artist>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Artist List</h2>
 
-@Model.Name
+<ul>
+    @foreach (var artist in Model)
+    {
+        @Html.Partial("_Artist", artist)
+    }
+</ul>

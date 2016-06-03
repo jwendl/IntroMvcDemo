@@ -17,7 +17,14 @@ namespace IntroMvcDemo.Controllers
 
         public async Task<ActionResult> Index()
         {
-            var artist = await artistRepository.FetchAsync(1);
+            var artists = await artistRepository.FetchAllAsync(a => a.Albums);
+
+            return View(artists);
+        }
+
+        public async Task<ActionResult> Item(int id)
+        {
+            var artist = await artistRepository.FindOneAsync(a => a.Id == id, a => a.Albums);
 
             return View(artist);
         }
